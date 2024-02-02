@@ -55,7 +55,7 @@ pipeline {
 
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
+            GIT_REPO_NAME = "Ultimate_CI-CD"
             GIT_USER_NAME = "bala502"
         }       
 

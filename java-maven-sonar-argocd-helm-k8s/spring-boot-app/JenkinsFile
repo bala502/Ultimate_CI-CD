@@ -6,12 +6,13 @@ pipeline {
     }
   }
   stages {
-    stage('Checkout') {
-      steps {
-        sh 'echo passed'
-        git branch: 'main', credentialsId: 'git_hub_login', url: 'https://github.com/bala502/Ultimate_CI-CD.git'
-		        }
-                              }
+        stage('checkout') {
+            steps {
+                git branch: 'main', 
+                credentialsId: 'GIT_HUB_TOKEN', 
+                url: 'https://github.com/bala502/Ultimate_CI-CD.git'
+            }
+        }
 							  
         stage('Build and test') {
       steps {
